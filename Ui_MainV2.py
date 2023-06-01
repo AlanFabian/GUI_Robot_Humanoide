@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+ # -*- coding: utf-8 -*-
 
 # Form implementation generated from reading ui file 'Ui_MainV2.ui',
 # licensing of 'Ui_MainV2.ui' applies.
@@ -10,7 +10,6 @@
 
 from PySide2 import QtCore, QtGui, QtWidgets
 from PySide2.QtCore import *
-
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -102,6 +101,122 @@ class Ui_MainWindow(object):
 "QPushButton:hover{\n"
 "background-color:rgb(35,170,255);\n"
 "}")
+        
+        """cambios"""
+        self.Superior = QtWidgets.QWidget(self.centralwidget)
+        self.Superior.setEnabled(True)
+        self.Superior.setGeometry(QtCore.QRect(100, 50, 271, 321))
+        self.Superior.setObjectName("Superior")
+        self.Superior.hide()
+        
+        self.Cabeza = QtWidgets.QWidget(self.centralwidget)
+        self.Cabeza.setEnabled(True)
+        self.Cabeza.setGeometry(QtCore.QRect(100, 50, 271, 321))
+        self.Cabeza.setObjectName("Superior")
+        self.Cabeza.hide()
+        
+        self.Inferior = QtWidgets.QWidget(self.centralwidget)
+        self.Inferior.setEnabled(True)
+        self.Inferior.setGeometry(QtCore.QRect(100, 50, 271, 321))
+        self.Inferior.setObjectName("Inferior")
+        self.Inferior.hide()
+        
+        #cabeza#
+        self.ojos = QtWidgets.QSlider(self.Cabeza)
+        self.ojos.setGeometry(QtCore.QRect(50, 90, 160, 22))
+        self.ojos.setOrientation(QtCore.Qt.Horizontal)
+        self.ojos.setObjectName("ojos")
+        
+        self.cuello = QtWidgets.QSlider(self.Cabeza)
+        self.cuello.setGeometry(QtCore.QRect(30, 190, 160, 22))
+        self.cuello.setOrientation(QtCore.Qt.Horizontal)
+        self.cuello.setObjectName("cuello")
+        
+        self.cuello_desplazamiento = QtWidgets.QLabel(self.Cabeza)
+        self.cuello_desplazamiento.setGeometry(QtCore.QRect(50, 290, 47, 13))
+        self.cuello_desplazamiento.setObjectName("cabeza_desplazamiento")
+        self.cuello_desplazamiento.setStyleSheet("color: white;")
+        
+        self.cuello_label = QtWidgets.QLabel(self.Cabeza)
+        self.cuello_label.setGeometry(QtCore.QRect(50, 180, 47, 13))
+        self.cuello_label.setObjectName("cabeza_label")
+        self.cuello_label.setStyleSheet("color: white;")
+        
+        self.ojos_label = QtWidgets.QLabel(self.Cabeza)
+        self.ojos_label.setGeometry(QtCore.QRect(110, 70, 47, 13))
+        self.ojos_label.setObjectName("ojos_label")
+        self.ojos_label.setStyleSheet("color: white;")
+        
+        self.ojos_desplazamiento = QtWidgets.QLabel(self.Cabeza)
+        self.ojos_desplazamiento.setGeometry(QtCore.QRect(110, 120, 47, 13))
+        self.ojos_desplazamiento.setObjectName("ojos_desplazamiento")
+        self.ojos_desplazamiento.setStyleSheet("color: white;")
+        #cabeza#
+        
+        #superior#
+        self.dedo1 = QtWidgets.QSlider(self.Superior)
+        self.dedo1.setGeometry(QtCore.QRect(50, 90, 160, 22))
+        self.dedo1.setOrientation(QtCore.Qt.Horizontal)
+        self.dedo1.setObjectName("dedo1")
+        
+        self.dedo2 = QtWidgets.QSlider(self.Superior)
+        self.dedo2.setGeometry(QtCore.QRect(30, 190, 160, 22))
+        self.dedo2.setOrientation(QtCore.Qt.Horizontal)
+        self.dedo2.setObjectName("dedo2")
+        
+        self.dedo2_desplazamiento = QtWidgets.QLabel(self.Superior)
+        self.dedo2_desplazamiento.setGeometry(QtCore.QRect(50, 290, 47, 13))
+        self.dedo2_desplazamiento.setObjectName("dedo2_desplazamiento")
+        self.dedo2_desplazamiento.setStyleSheet("color: white;")
+        
+        self.dedo2_label = QtWidgets.QLabel(self.Superior)
+        self.dedo2_label.setGeometry(QtCore.QRect(50, 180, 47, 13))
+        self.dedo2_label.setObjectName("dedo2_label")
+        self.dedo2_label.setStyleSheet("color: white;")
+        
+        self.dedo1_label = QtWidgets.QLabel(self.Superior)
+        self.dedo1_label.setGeometry(QtCore.QRect(110, 70, 47, 13))
+        self.dedo1_label.setObjectName("dedo1_label")
+        self.dedo1_label.setStyleSheet("color: white;")
+        
+        self.dedo1_desplazamiento = QtWidgets.QLabel(self.Superior)
+        self.dedo1_desplazamiento.setGeometry(QtCore.QRect(110, 120, 47, 13))
+        self.dedo1_desplazamiento.setObjectName("dedo1_desplazamiento")
+        self.dedo1_desplazamiento.setStyleSheet("color: white;")
+        #superior#
+        
+        #inferior#
+        self.hombro = QtWidgets.QSlider(self.Inferior)
+        self.hombro.setGeometry(QtCore.QRect(30, 190, 160, 22))
+        self.hombro.setOrientation(QtCore.Qt.Horizontal)
+        self.hombro.setObjectName("hombro")
+        
+        self.hombro_desplazamiento = QtWidgets.QLabel(self.Inferior)
+        self.hombro_desplazamiento.setGeometry(QtCore.QRect(50, 290, 47, 13))
+        self.hombro_desplazamiento.setObjectName("hombro_desplazamiento")
+        self.hombro_desplazamiento.setStyleSheet("color: white;")
+        
+        self.hombro_label = QtWidgets.QLabel(self.Inferior)
+        self.hombro_label.setGeometry(QtCore.QRect(50, 180, 47, 13))
+        self.hombro_label.setObjectName("hombro_label")
+        self.hombro_label.setStyleSheet("color: white;")
+        
+        self.codo = QtWidgets.QSlider(self.Inferior)
+        self.codo.setGeometry(QtCore.QRect(50, 90, 160, 22))
+        self.codo.setOrientation(QtCore.Qt.Horizontal)
+        self.codo.setObjectName("codo")
+        
+        self.codo_label = QtWidgets.QLabel(self.Inferior)
+        self.codo_label.setGeometry(QtCore.QRect(110, 70, 47, 13))
+        self.codo_label.setObjectName("codo_label")
+        self.codo_label.setStyleSheet("color: white;")
+        
+        self.codo_desplazamiento = QtWidgets.QLabel(self.Inferior)
+        self.codo_desplazamiento.setGeometry(QtCore.QRect(110, 120, 47, 13))
+        self.codo_desplazamiento.setObjectName("codo_desplazamiento")
+        self.codo_desplazamiento.setStyleSheet("color: white;")
+        #inferior#
+        
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap("Robot_Head_Icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.Btn_Menu_3.setIcon(icon1)
@@ -163,7 +278,8 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-
+        
+        
   # setupUi
 
     def retranslateUi(self, MainWindow):
@@ -172,6 +288,21 @@ class Ui_MainWindow(object):
         self.Btn_Menu_1.setText(QCoreApplication.translate("MainWindow", u"Hand", None))
         self.Btn_Menu_2.setText(QCoreApplication.translate("MainWindow", u"Arms", None))
         self.Btn_Menu_3.setText(QCoreApplication.translate("MainWindow", u"Head", None))
+        
+        self.dedo2_desplazamiento.setText(QCoreApplication.translate("MainWindow", "0"))
+        self.dedo2_label.setText(QCoreApplication.translate("MainWindow", "dedo2"))
+        self.dedo1_label.setText(QCoreApplication.translate("MainWindow", "dedo1"))
+        self.dedo1_desplazamiento.setText(QCoreApplication.translate("MainWindow", "0"))
+        
+        self.hombro_desplazamiento.setText(QCoreApplication.translate("MainWindow", "0"))
+        self.hombro_label.setText(QCoreApplication.translate("MainWindow", "Hombro"))
+        self.codo_label.setText(QCoreApplication.translate("MainWindow", "Codo"))
+        self.codo_desplazamiento.setText(QCoreApplication.translate("MainWindow", "0"))
+        
+        self.cuello_desplazamiento.setText(QCoreApplication.translate("MainWindow", "0"))
+        self.cuello_label.setText(QCoreApplication.translate("MainWindow", "cuello"))
+        self.ojos_label.setText(QCoreApplication.translate("MainWindow", "Ojos"))
+        self.ojos_desplazamiento.setText(QCoreApplication.translate("MainWindow", "0"))
         ######################################################################################
         #self.label_1.setText(QCoreApplication.translate("MainWindow", u"PAGE 1", None))
         #self.label_2.setText(QCoreApplication.translate("MainWindow", u"PAGE 2", None))
