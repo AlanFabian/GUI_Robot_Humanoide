@@ -34,6 +34,18 @@ class MainWindow(QMainWindow):
         # Pagina 3
         self.ui.Btn_Menu_3.clicked.connect(lambda: self.ui.stackedWidget.setCurrentWidget(self.ui.page_3))
 
+        self.ui.Btn_Menu_1.clicked.connect(lambda: UIFunctions.show_superior(self))
+        self.ui.Btn_Menu_2.clicked.connect(lambda: UIFunctions.show_inferior(self))
+        self.ui.Btn_Menu_3.clicked.connect(lambda: UIFunctions.show_cabeza(self))
+        
+        self.ui.dedo1.valueChanged.connect(lambda: UIFunctions.mover_dedo1(self,self.ui.dedo1.value()))
+        self.ui.dedo2.valueChanged.connect(lambda: UIFunctions.mover_dedo2(self,self.ui.dedo2.value()))
+    
+        self.ui.hombro.valueChanged.connect(lambda: UIFunctions.mover_hombro(self,self.ui.hombro.value()))
+        self.ui.codo.valueChanged.connect(lambda: UIFunctions.mover_codo(self,self.ui.codo.value()))
+
+        self.ui.cuello.valueChanged.connect(lambda: UIFunctions.mover_cuello(self,self.ui.cuello.value()))
+        self.ui.ojos.valueChanged.connect(lambda: UIFunctions.mover_ojos(self,self.ui.ojos.value()))
 
         ## Mostrar la pagina principal
         ########################################################################
