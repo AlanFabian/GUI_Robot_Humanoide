@@ -1,4 +1,7 @@
 from main import *
+from gui_camara_2 import App
+
+
 class UIFunctions(MainWindow):
     def toggleMenu(self,maxWidth,enable):
         if enable:
@@ -171,6 +174,7 @@ class UIFunctions(MainWindow):
         self.ui.horizontalSlider.setSliderPosition(self.ui.distanciaHead[5])
 
     def mover_dedos(self,value):
+        print(self.ui.distancia)
         if self.ui.dedoseleccionado==0:
             self.ui.dedodistancia.setText(str(value))
             self.ui.distancia[0]=value
@@ -280,3 +284,7 @@ class UIFunctions(MainWindow):
     def moverCodoDer(self,value):
         self.ui.labelCodoDer.setText(str(value))
         self.ui.codoDer=value
+        
+    def window2(self):
+        self.w = App()
+        self.w.show()
