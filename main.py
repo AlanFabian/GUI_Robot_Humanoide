@@ -5,7 +5,6 @@ from PySide2 import QtCore, QtGui, QtWidgets
 from PySide2.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
 from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
 from PySide2.QtWidgets import *
-
 # Archivo de GUI Qt Designer
 from Ui_MainV2 import Ui_MainWindow
 
@@ -55,6 +54,7 @@ class MainWindow(QMainWindow):
         #Cambios actualizacion del label de valores 
         
         self.ui.camara.clicked.connect(lambda:UIFunctions.window2(self)) 
+        self.ui.NPL.clicked.connect(lambda:UIFunctions.windowNPL(self))
         
         
         self.ui.Btn_Horizontal.pressed.connect(lambda:UIFunctions.change_Horizontal_direction(self))
@@ -82,9 +82,6 @@ class MainWindow(QMainWindow):
         self.ui.sliderCodoDer.valueChanged.connect(lambda: UIFunctions.moverCodoDer(self,self.ui.sliderCodoDer.value()))
         """-"""
         
-        
-        #Cambios Alan
-        ############################################################################
 
         ## Mostrar la pagina principal
         ########################################################################
