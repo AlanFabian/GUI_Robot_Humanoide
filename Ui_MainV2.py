@@ -1,12 +1,3 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'Ui_MainV2.ui',
-# licensing of 'Ui_MainV2.ui' applies.
-#
-# Created: Mon May 29 12:30:56 2023
-#      by: pyside2-uic  running on PySide2 5.13.2
-#
-# WARNING! All changes made in this file will be lost!
 
 from PySide2 import QtCore, QtGui, QtWidgets
 from PySide2.QtCore import *
@@ -153,11 +144,18 @@ class Ui_MainWindow(object):
         self.Neck_Box.setObjectName("Neck_Box")
         
         self.camara = QtWidgets.QPushButton(self.Cabeza)
-        self.camara.setGeometry(QtCore.QRect(200, 200, 121, 61))
+        self.camara.setGeometry(QtCore.QRect(200, 300, 121, 61))
         font = QtGui.QFont()
         font.setPointSize(16)
         self.camara.setFont(font)
         self.camara.setObjectName("camara")
+        
+        self.NPL = QtWidgets.QPushButton(self.Cabeza)
+        self.NPL.setGeometry(QtCore.QRect(400,300,121,61))
+        font = QtGui.QFont()
+        font.setPointSize(16)
+        self.NPL.setFont(font)
+        self.NPL.setObjectName("NPL")
         
         self.Btn_Horizontal = QtWidgets.QPushButton(self.Neck_Box)
         self.Btn_Horizontal.setGeometry(QtCore.QRect(20, 30,110,23))
@@ -717,6 +715,7 @@ class Ui_MainWindow(object):
         
         #Group Eyes
         self.camara.setText(QCoreApplication.translate("MainWindow", "camara"))
+        self.NPL.setText(QCoreApplication.translate("MainWindow","NPL"))
         self.Btn_Horizontal_2.setText(QCoreApplication.translate("MainWindow","Horizontal"))
         self.Btn_Vertical_2.setText(QCoreApplication.translate("MainWindow","Vertical"))
         
